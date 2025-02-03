@@ -1,1 +1,22 @@
-spring.application.name=microservices-demo
+#General Configuration
+spring:
+  application:
+    name: micro-services
+  config:
+    import:
+    - optional:configserver:http://locahost:8888/
+  cloud:
+    config:
+      profile: dev
+  #Databse configuration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microservices_demo?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: ""
+  #ORM configuration
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
