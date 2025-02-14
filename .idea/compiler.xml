@@ -9,12 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservices-demo" />
         <module name="config-server" />
+        <module name="book-service" />
+        <module name="currency-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="book-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="currency-service" options="-parameters" />
       <module name="microservices-demo" options="-parameters" />
     </option>
   </component>

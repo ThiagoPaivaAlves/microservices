@@ -4,10 +4,10 @@ spring:
     name: micro-services
   config:
     import:
-    - optional:configserver:http://locahost:8888/
+    - optional:configserver:http://localhost:8888/
   cloud:
     config:
-      profile: dev
+      profile: service1-demo-dev
   #Databse configuration
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,3 +20,10 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: false
+#Spring actuator Configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'

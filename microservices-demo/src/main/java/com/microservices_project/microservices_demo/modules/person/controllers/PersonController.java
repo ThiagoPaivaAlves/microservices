@@ -64,7 +64,7 @@ public class PersonController {
     
     @GetMapping(path = "/find/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(description = "Finds all Person by name registered in database",
-            summary = "Finds aall Person by name registered in database", responses = {
+            summary = "Finds all Person by name registered in database", responses = {
             @ApiResponse(description = "SUCCESS", responseCode = "200", content = {
                     @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             array = @ArraySchema(schema = @Schema(implementation = PersonDto.class)))}),
