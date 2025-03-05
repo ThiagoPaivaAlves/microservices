@@ -51,7 +51,6 @@ public class PersonController {
             @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
             @ApiResponse(description = "Not Found", responseCode = "404", content = @Content),
             @ApiResponse(description = "Internal Error", responseCode = "500", content = @Content)})
-//    public ResponseEntity<Page<PersonDto>> findAllPerson(
     public ResponseEntity<PagedModel<EntityModel<PersonDto>>> findAllPerson(
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "limit", defaultValue = "10") Integer limit,
